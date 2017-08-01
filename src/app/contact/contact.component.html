@@ -1,4 +1,6 @@
-<form #form="ngForm" (ngSubmit)="onSubmit(form.value)">  
+<div>contact component</div>
+
+<!-- <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">  
   <app-contact
     required
     name="first_name"
@@ -32,4 +34,36 @@
   </app-contact>
 
   <button type="Submit" [disabled]="!form.valid">Submit</button>
-</form>  
+</form>   -->
+
+ <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">  
+ 
+  <input
+    name="first_name"
+    label="First Name:"
+    placeholder="Enter first name"
+    [(ngModel)]="firstName">
+
+  <input
+    required
+    name="last_name"
+    label="Last Name:"
+    placeholder="Enter last name"
+    [(ngModel)]="lastName">
+
+  <input
+    required
+    name="phone"
+    label="Phone number:"
+    placeholder="Enter phone number"
+    [(ngModel)]="phone">
+
+  <input
+    required
+    name="email"
+    label="Email address:"
+    placeholder="Enter email address"
+    [(ngModel)]="email">
+
+  <button type="Submit" [disabled]="!form.valid">Submit</button>
+</form>   
