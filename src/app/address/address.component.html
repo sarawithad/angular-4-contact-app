@@ -2,19 +2,19 @@
 
  <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">  
     <label>Address 1:
-      <input required name="address_1" [(ngModel)]="addressOne">
+      <input #addressOne required name="address_1" [(ngModel)]="addressOne">
     </label>
     <br>
     <label>Address 2 (optional):
-      <input required name="address_2" [(ngModel)]="addressTwo">
+      <input #addressTwo required name="address_2" [(ngModel)]="addressTwo">
     </label>
     <br>
     <label>City:
-      <input required name="city" [(ngModel)]="city">
+      <input #contactCity required name="city" [(ngModel)]="city">
     </label>
      <br> 
     <label>State:
-        <select required name="state" [(ngModel)]="state">
+        <select #contactState required name="state" [(ngModel)]="state">
           <option [value]="TN">TN</option>
           <option [value]="AL">AL</option>
           <option [value]="GA">GA</option>
@@ -25,8 +25,8 @@
     </label>
     <br>
     <label>Zip code:
-      <input required name="zip_code" [(ngModel)]="email">
+      <input #contactZip required name="zip_code" [(ngModel)]="zip">
     </label>
     <br>
-    <button type="Submit" class="btn-primary" [disabled]="!form.valid">Submit and Continue</button>
+    <button (click)="submitAddress(form.value)" type="Submit" class="btn-primary" [disabled]="!form.valid" [routerLink]="['/displayinfo']">Submit</button>
 </form>   

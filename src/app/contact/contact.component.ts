@@ -11,16 +11,12 @@ import { FormsModule, NgModel } from '@angular/forms';
 export class ContactComponent implements OnInit {
 
   constructor(
-    // private route: ActivatedRoute,
-    // private location: Location
+
   ) { }
 
   ngOnInit() {
 
   }
 
-   onSubmit(form: any): void {  
-    console.log('you submitted value:', form);  
-  }
-
-}
+   onSubmit(form: any): void {
+    console.log('you submitted value:', form);  }

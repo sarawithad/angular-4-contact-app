@@ -2,20 +2,24 @@
 
  <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">  
     <label>First name:
-      <input required name="first_name" placeholder="First name" [(ngModel)]="firstName">
+      <input #contactFirstName required name="first_name" placeholder="First name" [(ngModel)]="firstName">
     </label>
     <br>
     <label>Last name:
-      <input required name="last_name" placeholder="Last name" [(ngModel)]="lastName">
+      <input #contactLastName required name="last_name" placeholder="Last name" [(ngModel)]="lastName">
     </label>
     <br>
     <label>Phone number:
-      <input required name="phone" placeholder="Phone number" [(ngModel)]="phone">
+      <input #contactPhone required name="phone" placeholder="Phone number" [(ngModel)]="phone">
     </label>
      <br> 
     <label>Email address:
-      <input required name="email" placeholder="Email address" [(ngModel)]="email">
+      <input #contactEmail required name="email" placeholder="Email address" [(ngModel)]="email">
     </label>
     <br>
-    <button type="Submit" class="btn-primary" [disabled]="!form.valid">Submit and Continue</button>
+    <button (click)="submitContact(form.value)" type="Submit" class="btn-primary" [disabled]="!form.valid" [routerLink]="['/address']">Continue</button>
 </form>   
+
+
+
+
