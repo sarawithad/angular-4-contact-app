@@ -1,3 +1,35 @@
-<p>
-  contact works!
-</p>
+<form #form="ngForm" (ngSubmit)="onSubmit(form.value)">  
+  <app-contact
+    required
+    name="first_name"
+    label="First Name:"
+    placeholder="Enter first name"
+    [(ngModel)]="firstName">
+  </app-contact>
+
+  <app-contact
+    required
+    name="last_name"
+    label="Last Name:"
+    placeholder="Enter last name"
+    [(ngModel)]="lastName">
+  </app-contact>
+
+  <app-contact
+    required
+    name="phone"
+    label="Phone number:"
+    placeholder="Enter phone number"
+    [(ngModel)]="phone">
+  </app-contact>
+
+  <app-contact
+    required
+    name="email"
+    label="Email address:"
+    placeholder="Enter email address"
+    [(ngModel)]="email">
+  </app-contact>
+
+  <button type="Submit" [disabled]="!form.valid">Submit</button>
+</form>  

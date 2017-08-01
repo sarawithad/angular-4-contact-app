@@ -1,3 +1,50 @@
-<p>
-  address works!
-</p>
+<form #form="ngForm" (ngSubmit)="onSubmit(form.value)">  
+  <app-address
+    required
+    name="address_1"
+    label="Address 1:"
+    placeholder="Enter address"
+    [(ngModel)]="addressOne">
+  </app-address>
+
+  <app-address
+    name="address_2"
+    label="Address 2:"
+    placeholder="Continue entering address if applicable"
+    [(ngModel)]="addressTwo">
+  </app-address>
+
+  <app-address
+    required
+    name="city"
+    label="City"
+    placeholder="Enter city"
+    [(ngModel)]="city">
+  </app-address>
+
+  <app-address
+    required
+    name="state"
+    label="State:"
+    placeholder="Select a state from dropdown"
+    [(ngModel)]="state">
+    <option [value]="TN">TN</option>
+    <option [value]="AL">AL</option>
+    <option [value]="GA">GA</option>
+    <option [value]="FL">FL</option>
+    <option [value]="KY">KY</option>
+    <option [value]="NC">NC</option>
+  </app-address>
+
+
+  <app-address
+    required
+    name="zip-code"
+    label="Zip code:"
+    placeholder="Enter zip code"
+    [(ngModel)]="zip">
+  </app-address>
+
+
+  <button type="Submit" [disabled]="!form.valid">Submit</button>
+</form>  
