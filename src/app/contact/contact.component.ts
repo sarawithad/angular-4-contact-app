@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location
+  ) { }
 
   ngOnInit() {
+
   }
 
 }

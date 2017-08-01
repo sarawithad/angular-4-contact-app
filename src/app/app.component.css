@@ -7,7 +7,7 @@
 }
 
 .logo {
-    width: 25%;
+    max-width: 25%;
     height: 200px;
     text-align: left;
     position: absolute;
