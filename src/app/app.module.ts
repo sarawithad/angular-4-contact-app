@@ -1,11 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { AddressComponent } from './address/address.component';
 import { DisplayComponent } from './display/display.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
 
@@ -15,12 +14,12 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     AppComponent,
     ContactComponent,
     AddressComponent,
-    DisplayComponent,
-    DashboardComponent
+    DisplayComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

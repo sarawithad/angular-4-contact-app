@@ -1,43 +1,32 @@
-<h1>Address Component</h1>
+<h3>Please continue entering information below</h3>
 
-<form #form="ngForm" (ngSubmit)="onSubmit(form.value)">  
-<input
-    name="address_1"
-    label="Address 1:"
-    placeholder="Enter address"
-    [(ngModel)]="addressOne">
-
-<input    name="address_2"
-    label="Address 2:"
-    placeholder="Continue entering address if applicable"
-    [(ngModel)]="addressTwo">
-
-<input
-    name="city"
-    label="City"
-    placeholder="Enter city"
-    [(ngModel)]="city">
-
-<select
-    name="state"
-    label="State:"
-    placeholder="Select a state from dropdown"
-    [(ngModel)]="state">
-    <option [value]="TN">TN</option>
-    <option [value]="AL">AL</option>
-    <option [value]="GA">GA</option>
-    <option [value]="FL">FL</option>
-    <option [value]="KY">KY</option>
-    <option [value]="NC">NC</option>
-</select>
-
-
-<input
-    name="zip-code"
-    label="Zip code:"
-    placeholder="Enter zip code"
-    [(ngModel)]="zip">
-
-
-  <button type="Submit" [disabled]="!form.valid">Submit</button>
+ <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">  
+    <label>Address 1:
+      <input required name="address_1" [(ngModel)]="addressOne">
+    </label>
+    <br>
+    <label>Address 2 (optional):
+      <input required name="address_2" [(ngModel)]="addressTwo">
+    </label>
+    <br>
+    <label>City:
+      <input required name="city" [(ngModel)]="city">
+    </label>
+     <br> 
+    <label>State:
+        <select required name="state" [(ngModel)]="state">
+          <option [value]="TN">TN</option>
+          <option [value]="AL">AL</option>
+          <option [value]="GA">GA</option>
+          <option [value]="FL">FL</option>
+          <option [value]="KY">KY</option>
+          <option [value]="NC">NC</option>
+      </select>
+    </label>
+    <br>
+    <label>Zip code:
+      <input required name="zip_code" [(ngModel)]="email">
+    </label>
+    <br>
+    <button type="Submit" class="btn-primary" [disabled]="!form.valid">Submit and Continue</button>
 </form>   

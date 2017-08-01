@@ -1,69 +1,21 @@
-<div>contact component</div>
-
-<!-- <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">  
-  <app-contact
-    required
-    name="first_name"
-    label="First Name:"
-    placeholder="Enter first name"
-    [(ngModel)]="firstName">
-  </app-contact>
-
-  <app-contact
-    required
-    name="last_name"
-    label="Last Name:"
-    placeholder="Enter last name"
-    [(ngModel)]="lastName">
-  </app-contact>
-
-  <app-contact
-    required
-    name="phone"
-    label="Phone number:"
-    placeholder="Enter phone number"
-    [(ngModel)]="phone">
-  </app-contact>
-
-  <app-contact
-    required
-    name="email"
-    label="Email address:"
-    placeholder="Enter email address"
-    [(ngModel)]="email">
-  </app-contact>
-
-  <button type="Submit" [disabled]="!form.valid">Submit</button>
-</form>   -->
+<h3>Enter your contact information below to connect with the Tennessee Department of Environment and Conservation</h3>
 
  <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">  
- 
-  <input
-    name="first_name"
-    label="First Name:"
-    placeholder="Enter first name"
-    [(ngModel)]="firstName">
-
-  <input
-    required
-    name="last_name"
-    label="Last Name:"
-    placeholder="Enter last name"
-    [(ngModel)]="lastName">
-
-  <input
-    required
-    name="phone"
-    label="Phone number:"
-    placeholder="Enter phone number"
-    [(ngModel)]="phone">
-
-  <input
-    required
-    name="email"
-    label="Email address:"
-    placeholder="Enter email address"
-    [(ngModel)]="email">
-
-  <button type="Submit" [disabled]="!form.valid">Submit</button>
+    <label>First name:
+      <input required name="first_name" placeholder="First name" [(ngModel)]="firstName">
+    </label>
+    <br>
+    <label>Last name:
+      <input required name="last_name" placeholder="Last name" [(ngModel)]="lastName">
+    </label>
+    <br>
+    <label>Phone number:
+      <input required name="phone" placeholder="Phone number" [(ngModel)]="phone">
+    </label>
+     <br> 
+    <label>Email address:
+      <input required name="email" placeholder="Email address" [(ngModel)]="email">
+    </label>
+    <br>
+    <button type="Submit" class="btn-primary" [disabled]="!form.valid">Submit and Continue</button>
 </form>   

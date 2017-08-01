@@ -1,23 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from '../dashboard/dashboard.component'
-import { ContactComponent } from '../contact/contact.component'
-import { AddressComponent } from '../address/address.component'
-import { DisplayComponent } from '../display/display.component'
+import { ContactComponent } from '../contact/contact.component';
+import { AddressComponent } from '../address/address.component';
+import { DisplayComponent } from '../display/display.component';
 
 
 
 const routes: Routes = [
     {
-        path: 'contact1',
+        path: 'contact',
         component: ContactComponent,
     },
     {
-        path: 'contact2',
+        path: 'address',
         component: AddressComponent,
     },
     {
-        path: 'displaycontact',
+        path: 'displayinfo',
         component: DisplayComponent,
     },
 ];

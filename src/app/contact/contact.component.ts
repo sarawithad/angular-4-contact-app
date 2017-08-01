@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { NgModel } from '@angular/forms';
+import { FormsModule, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -11,12 +11,16 @@ import { NgModel } from '@angular/forms';
 export class ContactComponent implements OnInit {
 
   constructor(
-    private route: ActivatedRoute,
-    private location: Location
+    // private route: ActivatedRoute,
+    // private location: Location
   ) { }
 
   ngOnInit() {
 
+  }
+
+   onSubmit(form: any): void {  
+    console.log('you submitted value:', form);  
   }
 
 }
